@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 export class LoginComponent {
   username = 'pete'
   password = ''
+  errorMessage = 'Invalid Credentials'
+  invalidLogin = false
 
   constructor() {}
 
@@ -18,6 +20,10 @@ export class LoginComponent {
   }
 
   handleLogin() {
-    console.log(this.username)
+    if (this.username === 'pete' && this.password === 'snowman') {
+      this.invalidLogin = false
+    } else {
+      this.invalidLogin = true
+    }
   }
 }
