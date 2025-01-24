@@ -1,0 +1,15 @@
+<table border="1">
+    <caption>My Points</caption>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pnt of pntLst">
+            <th>{{pnt.id}}</th>
+            <th>{{pnt.description}}</th>
+        </tr>
+    </tbody>
+</table>
